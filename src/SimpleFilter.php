@@ -12,7 +12,6 @@ trait SimpleFilter
      */
     public function newEloquentBuilder($query)
     {
-        echo '123';
         require_once 'CustomEloquentBuilder.php';
         return new CustomEloquentBuilder($query);
     }
