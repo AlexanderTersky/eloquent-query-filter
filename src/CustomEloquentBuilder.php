@@ -18,7 +18,9 @@ class CustomEloquentBuilder extends Builder
         foreach ($filter as $column => $value) {
             if ($value == '') continue; // Если значение пустое, переходим к следующей итерации
 
-            [$column, $operator] = explode(':', $column);// Получаем имя поля в таблице и оператор
+            // Получаем имя поля в таблице и оператор
+            $column = explode(':', $column)[0];
+            $operator = explode(':', $column)[1];
 
             //Если поле не передано
             if ($column == '') {
