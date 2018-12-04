@@ -1,4 +1,4 @@
-#Eloquent Query Filters
+# Eloquent Query Filters
 A simple PHP Eloquent extension for universal filters.
 
 ## Installation

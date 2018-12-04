@@ -1,6 +1,6 @@
 {
   "name": "wtolk/eloquent-query-filter",
-  "description": "some description",
+  "description": "A simple PHP Eloquent extension for universal filters",
   "type": "library",
   "license": "MIT",
   "keywords": ["laravel", "database", "filter", "url", "query"],
