@@ -19,8 +19,17 @@ class CustomEloquentBuilder extends Builder
             if ($value == '') continue; // Если значение пустое, переходим к следующей итерации
 
             // Получаем имя поля в таблице и оператор
-            $column = explode(':', $column)[0];
-            $operator = explode(':', $column)[1];
+            $column_operator = explode(':', $column);
+            if (count($column_operator) !== 1){
+                $column = explode(':', $column)[0];
+                $operator = explode(':', $column)[1];
+            }else{
+                $method = $column_operator[0];
+                if (method_exists($this->model, $method)) {
+                    $this->{$method}($value);
+                    continue;
+                }
+            }
 
             //Если поле не передано
             if ($column == '') {
