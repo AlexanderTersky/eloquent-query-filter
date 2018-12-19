@@ -65,3 +65,12 @@ public function customMethodFilter($value, $builder)
 ```html
 <input type="text" name="filter[:customMethodFilter]">
 ```
+
+
+### Eloquent Query Builder methods support
+
+You can use default Builder methods like limit, offset, etc.
+```html
+<input type="text" name="filter[limit]">
+<input type="text" name="filter[offset]">
+```
