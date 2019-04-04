@@ -1,6 +1,6 @@
 <?php
 
-namespace WTolk\Eloquent;
+namespace Wtolk\Eloquent;
 
 trait Filter
 {

@@ -3,7 +3,7 @@
   "description": "A simple PHP Eloquent extension for universal filters",
   "type": "library",
   "license": "MIT",
-  "keywords": ["laravel", "database", "filter", "eloquent","url", "query","wtolk","webtolk"],
+  "keywords": ["laravel", "database", "filter", "eloquent","url", "universal", "query","wtolk","webtolk"],
   "require": {
     "php": ">=5.6",
     "illuminate/database": "^5.3"
