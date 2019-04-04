@@ -1,10 +1,8 @@
 <?php
 
-namespace WTolk;
+namespace Wtolk\Eloquent;
 
-use Illuminate\Database\Eloquent\Builder;
-
-class CustomEloquentBuilder extends Builder
+class Builder extends Illuminate\Database\Eloquent\Builder
 {
     /**
      * Custom filters handler
@@ -20,10 +18,10 @@ class CustomEloquentBuilder extends Builder
 
             // Получаем имя поля в таблице и оператор
             $column_operator = explode(':', $column);
-            if (count($column_operator) !== 1){
+            if (count($column_operator) !== 1) {
                 $column = explode(':', $column)[0];
                 $operator = explode(':', $column)[1];
-            }else{
+            } else {
                 $method = $column_operator[0];
                 if (method_exists($this->model, $method)) {
                     $this->{$method}($value);
@@ -47,9 +45,8 @@ class CustomEloquentBuilder extends Builder
 
                 if (in_array($operator, $this->query->operators)) {
 
-                    if (method_exists($this->model, 'set'.$column.'attribute'))
-                    {
-                        $this->model->{'set'.$column.'attribute'}($value);
+                    if (method_exists($this->model, 'set' . $column . 'attribute')) {
+                        $this->model->{'set' . $column . 'attribute'}($value);
                         $value = $this->model->getAttributes()[$column];
                     }
 
@@ -66,5 +63,4 @@ class CustomEloquentBuilder extends Builder
         }
         return $this;
     }
-
 }

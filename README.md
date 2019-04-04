@@ -32,11 +32,11 @@ Our case is filtering users by name, age and gender
 <?php
 
 use Illuminate\Database\Eloquent\Model;
-use WTolk\SimpleFilter;
+use WTolk\Eloquent\Filter;
 
 class User extends Model
 {
-    use SimpleFilter;
+    use Filter;
 }
 ```
 ### View
@@ -56,14 +56,14 @@ You can use your own filter methods. Create method in your Model
 You must return the object of QueryBuilder. 
 
 ```php
-public function customMethodFilter($value, $builder)
+public function customFilterMethod($value, $builder)
 {
     $builder->/*any queryBuilderMethods*/;
     return $builder;
 }
 ```
 ```html
-<input type="text" name="filter[:customMethodFilter]">
+<input type="text" name="filter[:customFilterMethod]">
 ```
 
 

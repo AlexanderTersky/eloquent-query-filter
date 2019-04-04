@@ -9,9 +9,8 @@
     "illuminate/database": "^5.3"
   },
   "autoload": {
-    "files": [
-      "src/SimpleFilter.php",
-      "src/CustomEloquentBuilder.php"
-    ]
+    "psr-4": {
+      "Wtolk\\Eloquent\\": "eloquent/"
+    }
   }
 }
