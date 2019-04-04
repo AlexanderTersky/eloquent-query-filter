@@ -2,7 +2,7 @@
 
 namespace Wtolk\Eloquent;
 
-class Builder extends Illuminate\Database\Eloquent\Builder
+class Builder extends \Illuminate\Database\Eloquent\Builder
 {
     /**
      * Custom filters handler
