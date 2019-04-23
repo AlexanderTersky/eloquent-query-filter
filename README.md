@@ -48,7 +48,7 @@ class User extends Model
 
 ### Controller
 ```php
-$users=User::filter($request->filter())->get();
+$users=User::filter($request->input('filter'))->get();
 ```
 
 ### Custom filter method
