@@ -4,7 +4,7 @@ A simple PHP Eloquent extension for universal filters.
 ## Installation
 
 ```
-$ composer require wtolk/eloqunt-query-filter
+$ composer require wtolk/eloquent-query-filter
 ```
 
 ```json
