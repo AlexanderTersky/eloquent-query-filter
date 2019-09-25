@@ -7,6 +7,10 @@ class Builder extends \Illuminate\Database\Eloquent\Builder
     public function filter($filter)
     {
 
+        if (is_null($filter)){
+            return $this;
+        }
+
         foreach ($filter as $input_name => $value) {
             if ($value == '') continue; // If value is empty, going to next iteration
 
