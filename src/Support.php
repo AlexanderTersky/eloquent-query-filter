@@ -15,7 +15,7 @@ class Support
         }
     }
 
-    public function checkValue($builder, $column, $operator, $value)
+    public static function checkValue($builder, $column, $operator, $value)
     {
         $model = $builder->getModel();
         if (method_exists($model, 'set' . $column . 'attribute')) {
